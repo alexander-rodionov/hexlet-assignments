@@ -1,0 +1,6 @@
+<% if @not_found %>
+<p> Article not found </p>
+<% else %>
+<h1><%= @article.title %></h1>
+<p> <%= @article.body %>
+<% end %>
