@@ -1,0 +1,22 @@
+# require: rubocop-rails
+
+require:
+  - rubocop-rails
+  
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'bin/**'
+    - 'db/schema.rb'
+    - 'db/migrate/**'
+    - 'examples/**'
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# BEGIN
+
+# END

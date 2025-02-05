@@ -1,0 +1,17 @@
+# Define a sample bulletin that is published
+published_bulletin:
+  title: "Important Announcement"
+  body: "This is an important announcement for all users."
+  published: true
+
+# Define a sample bulletin that is not published
+unpublished_bulletin:
+  title: "Draft Announcement"
+  body: "This is a draft announcement that is not yet published."
+  published: false
+
+# Define another sample bulletin that is published
+another_published_bulletin:
+  title: "Upcoming Event"
+  body: "Join us for an upcoming event on Saturday."
+  published: true
