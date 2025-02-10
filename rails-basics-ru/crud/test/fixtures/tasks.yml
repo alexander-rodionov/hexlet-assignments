@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: <%= Faker::Lorem.sentence %>
+  description: <%= Faker::Lorem.paragraph %>
+  status: new
+  creator: <%= Faker::Name.name %>
+  performer: <%= Faker::Name.name %>
+  completed: false
+
+two:
+  name: <%= Faker::Lorem.sentence %>
+  description: <%= Faker::Lorem.paragraph %>
+  status: in_progress
+  creator: <%= Faker::Name.name %>
+  performer: <%= Faker::Name.name %>
+  completed: true
