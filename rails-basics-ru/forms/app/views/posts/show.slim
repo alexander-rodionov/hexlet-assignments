@@ -1,0 +1,4 @@
+= render 'table'
+p = link_to 'Edit', edit_post_path(@data)
+p = post_path(@data[:id])
+= button_to "Delete", { controller: :posts, action: 'destroy', id: @data.id }, method: :delete, form: { data: { confirm: 'Are you sure?' } }

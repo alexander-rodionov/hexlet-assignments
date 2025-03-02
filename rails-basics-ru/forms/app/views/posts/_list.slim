@@ -1,0 +1,14 @@
+table
+    thead
+        tr 
+            th Title 
+            th Summary 
+            th Published
+    tbody 
+        - @data.each do |d|
+            tr
+                td 
+                    = link_to d.title, post_path(d)
+                td = d.summary
+                td = d.published ? 'Yes' : 'No'          
+                    
