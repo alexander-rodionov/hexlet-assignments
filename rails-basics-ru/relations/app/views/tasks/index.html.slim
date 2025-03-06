@@ -1,0 +1,24 @@
+= content_for :title do
+  ='Tasks'
+
+table.table.table-stripped.table-hover.mb-5 
+  thead
+    tr
+      th { scope = 'col' } #
+      th { scope = 'col' } Name
+      th { scope = 'col' } Author 
+      th { scope = 'col' } Status
+      th
+  tbody 
+    - @tasks.each do |t|
+      tr
+        th { scope = 'row' } = t.id
+        td = t.name
+        td = t.user.name
+        td = t.status.name
+        td.d-flex
+          .me-4 = link_to 'Show', t
+          .me-4 = link_to 'Edit', edit_task_path(t)
+          = link_to 'Delete', t, data: {turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'link-danger'
+          
+= link_to 'New', new_task_path, class: 'btn btn-primary'

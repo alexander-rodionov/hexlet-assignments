@@ -1,0 +1,8 @@
+= content_for :title do
+  = 'Edit Task'
+
+.d-flex.flex-column
+  .p-2
+    == render 'form', task: @task
+  .p-2
+    =link_to 'To List', tasks_path, class: 'btn btn-outline-primary'

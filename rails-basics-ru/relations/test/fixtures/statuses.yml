@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# BEGIN
+new:
+  name: 'New'
+  sort_order: 1
+
+in_progress:
+  name: 'In progress'
+  sort_order: 2
+
+done:
+  name: 'Done'
+  sort_order: 3
+  
+# END

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# BEGIN
+
+one:
+  name: 'John'
+
+two:
+  name: 'Peter'
+
+three:
+  name: 'Sarah'
+
+# END

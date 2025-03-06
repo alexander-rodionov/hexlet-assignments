@@ -1,0 +1,7 @@
+= simple_form_for(task) do |f|
+  .d-flex.flex-column
+    = f.input :name
+    = f.input :description, as: :text 
+    = f.association :user, label: 'Author', hint: false 
+    = f.association :status, collection: Status.order(:sort_order), label_method: :name, value_method: :id
+    = f.button :submit, class: 'btn btn-success mt-4 btn-block'
