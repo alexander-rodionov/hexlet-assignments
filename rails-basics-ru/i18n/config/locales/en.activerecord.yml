@@ -1,0 +1,36 @@
+en:
+  activerecord:
+    models:
+      # BEGIN
+      post: Post
+      # END
+      post/comment: Comment
+    attributes:
+      # BEGIN
+      post:
+        title: Title
+        body: Body
+      comment:
+        body: Body
+      # END
+      post/comment:
+        body: Body
+
+    errors:
+      models:
+        post:
+          attributes:
+            # BEGIN
+            title:
+              blank: "should be filled"
+              too_short: "Title is too short (minimum is %{count} characters)"
+            body:
+              blank: "Body can't be blank"
+              too_short: "Body is too short (minimum is %{count} characters)"
+            # END
+        comment:
+          attributes:
+            body:
+              blank: "Comment body can't be blank"
+              too_short: "Comment body is too short (minimum is %{count} characters)"
+            # END

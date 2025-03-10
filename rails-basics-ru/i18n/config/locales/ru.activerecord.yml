@@ -1,0 +1,36 @@
+ru:
+  activerecord:
+    models:
+      # BEGIN
+      post: Пост
+      # END
+      post/comment: Комментарий
+    attributes:
+      # BEGIN
+      post:
+        title: Название
+        body: Текст
+      comment:
+        body: Текст
+      # END
+      post/comment:
+        body: Текст
+
+    errors:
+      models:
+        post:
+          attributes:
+            # BEGIN
+            title:
+              blank: "Должно быть заполнено"
+              too_short: "Заголовок слишком короткий (минимум %{count} символов)"
+            body:
+              blank: "Текст не может быть пустым"
+              too_short: "Текст слишком короткий (минимум %{count} символов)"
+            # END
+        comment:
+          attributes:
+            body:
+              blank: "Текст комментария не может быть пустым"
+              too_short: "Текст комментария слишком короткий (минимум %{count} символов)"
+            # END

@@ -1,0 +1,15 @@
+ru:
+  title: Хекслет
+  hexlet_title: © Хекслет, 2022
+  show: Показать
+  edit: Редактировать
+  destroy: Удалить
+  destroy_confirmation: Вы уверены?
+  back: Назад
+  menu:
+    root: Домой
+    posts: Посты
+  layouts:
+    shared:
+      nav:
+        hexlet_logo: Хекслет

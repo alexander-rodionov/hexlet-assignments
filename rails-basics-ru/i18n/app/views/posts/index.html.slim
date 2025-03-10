@@ -1,0 +1,43 @@
+- content_for :title do
+  = t('.title')
+
+table.table.table-striped.table-hover.mb-5
+  thead
+    tr
+      th{ scope = 'col' } #
+      th{ scope = 'col' }
+        / table title
+        / BEGIN
+        = t('.title_th')
+        / END
+      th
+        = t('.comments_th')
+      th
+
+  tbody
+    - @posts.each_with_index do |post, i|
+      tr
+        th{ scope = 'row' } = i + 1
+        td
+          = link_to post.title, post_path(post)
+        td
+          / comments count
+          / BEGIN
+          = t('posts.comments_plural', count:post.comments.count)
+          / END
+        td.d-flex
+          / posts links
+          / BEGIN
+          .me-5
+            =link_to edit_post_path(post) do 
+              = t('edit')
+          .me-0
+            =link_to post_path(post), data: { 'turbo-method': :delete, 'turbo-confirm': t('destroy_confirmation') }, class: 'link-danger' do
+              = t('destroy')
+          / END
+
+/ new post link
+= link_to new_post_path, id: 'new-post-link', class: 'btn btn-primary' do
+  / BEGIN
+  = t('.new')
+  / END

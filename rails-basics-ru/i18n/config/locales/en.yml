@@ -1,0 +1,15 @@
+en:
+  title: Hexlet
+  hexlet_title: © Hexlet, 2022
+  show: Show
+  edit: Edit
+  destroy: Delete
+  destroy_confirmation: Are you sure?
+  back: Back
+  menu:
+    root: Home
+    posts: Posts
+  layouts:
+    shared:
+      nav:
+        hexlet_logo: Hexlet
