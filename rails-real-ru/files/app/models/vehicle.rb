@@ -2,7 +2,7 @@
 
 class Vehicle < ApplicationRecord
   # BEGIN
-  
+
   # END
 
   validates :manufacture, presence: true
@@ -13,6 +13,6 @@ class Vehicle < ApplicationRecord
   validates :production_year, presence: true
 
   # BEGIN
-  
+
   # END
 end
