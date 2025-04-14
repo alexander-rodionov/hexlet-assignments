@@ -9,7 +9,7 @@ class Web::Movies::ReviewsController < Web::Movies::ApplicationController
 
   def create
     body = params.require(:review).permit(:body)[:body]
-    Review.create!(movie: resource_movie, body: body)
+    Review.create!(movie: resource_movie, body:)
     redirect_to movie_reviews_url(resource_movie)
   end
 

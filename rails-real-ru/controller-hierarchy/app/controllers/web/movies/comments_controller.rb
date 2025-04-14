@@ -9,7 +9,7 @@ class Web::Movies::CommentsController < Web::Movies::ApplicationController
 
   def create
     body = params.require(:comment).permit(:body)[:body]
-    Comment.create!(movie: resource_movie, body: body)
+    Comment.create!(movie: resource_movie, body:)
     redirect_to movie_comments_url(resource_movie)
   end
 
