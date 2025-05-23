@@ -73,6 +73,7 @@ group :test do
   gem 'webdrivers'
 
   # BEGIN
+  gem 'octokit'
   gem 'webmock'
   # END
 end

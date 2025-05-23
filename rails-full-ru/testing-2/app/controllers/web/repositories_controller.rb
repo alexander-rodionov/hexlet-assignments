@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # BEGIN
-
+require 'octokit'
 # END
 
 class Web::RepositoriesController < Web::ApplicationController
@@ -19,15 +19,13 @@ class Web::RepositoriesController < Web::ApplicationController
 
   def create
     @repository = Repository.new(permitted_params)
-
-    client = Octokit::Client.new(access_token: ENV.fetch('GITHUB_ACCESS_TOKEN', nil))
-    github_repo = client.repository(@repository.link[%r{.*/(.*/.*)$}, 1])
+    github_repo = Octokit::Repository.from_url(params[:repository][:link])
 
     @repository.update!(
       repo_name: github_repo.name,
-      description: github_repo.description,
-      owner_name: github_repo.owner.login
+      owner_name: github_repo.owner
     )
+    redirect_to repository_path(@repository)
   end
 
   def edit
