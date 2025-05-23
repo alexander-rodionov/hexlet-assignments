@@ -8,7 +8,9 @@ class Api::V1::UsersController < Api::ApplicationController
   end
 
   def show
+    p params
     @user = User.includes(:posts).find(params[:id])
+    p @user
     render :show, formats: :json
   end
   # END
